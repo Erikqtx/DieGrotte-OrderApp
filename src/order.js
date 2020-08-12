@@ -40,7 +40,7 @@ class Model {
     this._commit(this.orders);
   }
 
-  deleteOrders(id) {
+  deleteOrder(id) {
     this.orders = this.orders.filter((order) => order.id !== id);
 
     this._commit(this.orders);
@@ -74,7 +74,7 @@ class View {
     this.submitButton.textContent = "Submit";
     this.form.append(this.input, this.submitButton);
     this.title = this.createElement("h1");
-    this.title.textContent = "Orders";
+    this.title.textContent = "DieGrotte-Orders";
     this.orderList = this.createElement("ul", "order-list");
     this.app.append(this.title, this.form, this.orderList);
 
